@@ -1,1 +1,1 @@
-"# ncs-playground" 
+Collection of samples and snippets for NCS.
