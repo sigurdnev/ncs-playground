@@ -1,4 +1,4 @@
-# snippets
+# Snippets
 
 ## Zephyr RTOS
 
