@@ -1,1 +1,1 @@
-Collection of samples and snippets for NCS.
+[WIP] Collection of samples and snippets for NCS.
