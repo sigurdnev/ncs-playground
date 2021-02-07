@@ -1,0 +1,13 @@
+&spi1 {
+	compatible = "nordic,nrf-spim";
+	clock-frequency = <0x80000000>;
+	status = "okay";
+	sck-pin = <10>;
+	mosi-pin = <11>;
+	miso-pin = <12>;
+	cs-gpios = <&gpio0 13 0>;
+};
+
+&uart1 {
+	status = "disabled";
+};

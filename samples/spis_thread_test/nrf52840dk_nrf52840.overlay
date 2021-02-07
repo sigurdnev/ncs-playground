@@ -1,0 +1,9 @@
+&spi1 {
+	compatible = "nordic,nrf-spis";
+	status = "okay";
+	sck-pin = <16>;
+	mosi-pin = <31>;
+	miso-pin = <40>;
+	csn-pin = <30>;
+	def-char = <0xFF>;
+};
