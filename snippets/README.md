@@ -16,3 +16,7 @@ void main(void)
     k_thread_foreach(thread_printer, NULL);
 }
 ```
+
+### Debugging
+
+CONFIG_EXTRA_EXCEPTION_INFO
