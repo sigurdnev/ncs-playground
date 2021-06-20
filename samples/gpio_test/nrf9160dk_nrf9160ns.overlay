@@ -1,0 +1,7 @@
+&i2c3 {
+	status = "okay";
+	compatible = "nordic,nrf-twim";
+	sda-pin = < 12 >;
+	scl-pin = < 11 >;
+    clock-frequency = <I2C_BITRATE_STANDARD>;  
+};

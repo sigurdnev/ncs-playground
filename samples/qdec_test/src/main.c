@@ -13,6 +13,14 @@
 #include <nrfx_qdec.h>
 
 
+#define QDEC_IRQ QDEC_IRQn  //QDEC0_IRQn for nRF53
+
+
+static volatile bool m_report_ready_flag = false;
+static volatile bool m_first_report_flag = true;
+static volatile uint32_t m_accdblread;
+static volatile int32_t m_accread;
+
 
 ISR_DIRECT_DECLARE(nrfx_qdec_isr_handler)
 {
@@ -47,7 +55,7 @@ static void qdec_nrfx_event_handler(nrfx_qdec_event_t event)
 void main(void)
 {
 
-		IRQ_DIRECT_CONNECT(QDEC1_IRQn, 0,
+		IRQ_DIRECT_CONNECT(QDEC_IRQ, 0,
 			   nrfx_qdec_isr_handler, 0);
 	/* Rest of main */
 
