@@ -194,6 +194,9 @@ void ppi_init()
 	}
 }
 
+#define PWM_ENABLE 0
+
+#if PWM_ENABLE
 // Seq value for 500kHz out
 //int16_t buf[] = {(1 << 15) |  12  }; // Inverse polarity (bit 15)
 
@@ -238,6 +241,7 @@ static void bare_metal_pwm_test_start(void)
   NRF_PWM0->ENABLE = 1;
   NRF_PWM0->TASKS_SEQSTART[0] = 1;
 }
+#endif
 
 
 
@@ -254,7 +258,8 @@ void main(void)
     ppi_init();
     
     printk("Example start\r\n");
-	
-	//Start PWM output on PWM_PIN for testing. Connect pin 27 and 28 to test.
-	bare_metal_pwm_test_start();
+    #if PWM_ENABLE
+    //Start PWM output on PWM_PIN for testing. Connect pin 27 and 28 to test.
+    bare_metal_pwm_test_start();
+    #endif
 }
