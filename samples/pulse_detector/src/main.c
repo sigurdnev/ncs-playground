@@ -33,7 +33,7 @@ static const nrfx_timer_t m_timer_count = NRFX_TIMER_INSTANCE(1);
 
 static const nrfx_timer_t m_timer_read  = NRFX_TIMER_INSTANCE(2);
 
-nrf_ppi_channel_t ppi_channel_1, ppi_channel_2;
+//nrf_ppi_channel_t ppi_channel_1, ppi_channel_2;
 
 void timer_handler_count(nrf_timer_event_t event_type, void * p_context)
 {
@@ -244,13 +244,8 @@ static void bare_metal_pwm_test_start(void)
 #endif
 
 
-
-static const struct device *gpio_dev;
-
 void main(void)
 {
-	uint32_t err = 0;
-	
 	gpiote_init();
 	
     timer_init();
